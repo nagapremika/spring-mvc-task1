@@ -10,15 +10,15 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
 
 
-public class FrontControllerConfig implements WebApplicationInitializer {
+public class FrontControllerConfig implements WebApplicationInitializer {       //Implements WebApplicationInitializer
 
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
         AnnotationConfigWebApplicationContext webCtx = new AnnotationConfigWebApplicationContext();
-        webCtx.register(AppConfig.class);
+        webCtx.register(AppConfig.class);       //Registers the AppConfig class
         webCtx.setServletContext(servletContext);
         ServletRegistration.Dynamic servlet = servletContext.addServlet("dispatcher", new DispatcherServlet(webCtx));
-        servlet.setLoadOnStartup(1);
+        servlet.setLoadOnStartup(1);        // loads on startUp is always true
         servlet.addMapping("/");
     }
 }
