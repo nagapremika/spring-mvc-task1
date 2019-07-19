@@ -8,6 +8,6 @@
 <title>User Home Page</title>
 </head>
 <body>
-<h2> Welcome ${message} to stackroute!!! </h2>
+<h2> Welcome ${message} to stackroute!!! </h2>      <!-- Displays it on the user view--!>
 </body>
 </html>
