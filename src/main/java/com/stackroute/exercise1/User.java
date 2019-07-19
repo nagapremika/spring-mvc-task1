@@ -3,22 +3,22 @@ package com.stackroute.exercise1;
 import org.springframework.stereotype.Component;
 
 @Component
-public class User {
+public class User {    // Data Model
 private String message;
 
-    public User(String message) {
+    public User(String message) {       //Constructor
         this.message = message;
     }
 
-    public User() {
+    public User() {     //Default constructor
     }
 
-    public String getMessage()
+    public String getMessage()     // getter()
     {
         return message;
     }
 
-  public void setMessage() {
+  public void setMessage() {        //Setter()
         this.message ="Welcome to Stackroute";
     }
    public String toString()
